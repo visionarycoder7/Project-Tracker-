@@ -8,7 +8,7 @@ def home():
     conn = sqlite3.connect("project.db")
     cursor = conn.cursor()
 
-    cursor.execute("SELECT name, score FROM users ORDER BY score DESC")
+    cursor.execute("SELECT id, name, score FROM users ORDER BY score DESC")
     data = cursor.fetchall()
 
     conn.close()
